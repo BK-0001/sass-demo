@@ -1,3 +1,21 @@
+@use "components/avatar";
+@use "base/variables";
+
+.font {
+  // .font--sm
+  &--sm {
+    font-size: variables.$font-sm;
+  }
+  // .font-md
+  &--md {
+    font-size: variables.$font-md;
+  }
+  // .font-lg
+  &--lg {
+    font-size: variables.$font-lg;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,14 +60,6 @@ img {
     align-items: center;
     gap: 8px;
   }
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid white;
 }
 
 .actions {
