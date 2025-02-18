@@ -49,4 +49,15 @@ img {
   border: 2px solid white;
 }
 
+.actions {
+  display: flex;
+  height: 50px;
+  /**
+  flex-direction: column;
+  flex-wrap: wrap;
+  */
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=main.css.map */
