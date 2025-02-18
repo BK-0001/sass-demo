@@ -6,6 +6,31 @@
   border: 2px solid white;
 }
 
+.container {
+  padding: 24px;
+}
+
+.alert {
+  padding: 16px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.alert--primary {
+  background-color: #dff3ff;
+  color: #1c3e53;
+  border: 1px solid #c1e7ff;
+}
+.alert--success {
+  background-color: #d1e7dd;
+  color: #0a3622;
+  border: 1px solid #a3cfbb;
+}
+.alert--warning {
+  background-color: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffe69c;
+}
+
 .font--sm {
   font-size: 12px;
 }
