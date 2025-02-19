@@ -22,10 +22,31 @@ $alert-colors: (
   )
 );
 
-.alert {
+%alert-ish {
   padding: 16px;
   font-size: 12px;
   border-radius: 4px;
+}
+
+.card {
+  @extend %alert-ish; // 1
+
+  border: 1px solid rgb(232, 232, 232);
+}
+
+.button {
+  @extend %alert-ish;
+
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
+.alert {
+  @extend %alert-ish; // 2
+  // padding: 16px;
+  // font-size: 12px;
+  // border-radius: 4px;
 
   &--primary {
     background-color: map.get($alert-colors, primary, background-color);
