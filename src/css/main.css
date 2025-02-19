@@ -10,22 +10,11 @@
   padding: 24px;
 }
 
-.alert, .button, .card {
+.alert {
   padding: 16px;
   font-size: 12px;
   border-radius: 4px;
 }
-
-.card {
-  border: 1px solid rgb(232, 232, 232);
-}
-
-.button {
-  border: none;
-  background-color: blue;
-  color: white;
-}
-
 .alert--primary {
   background-color: #dff3ff;
   color: #1c3e53;
