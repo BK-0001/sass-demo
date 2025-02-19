@@ -19,6 +19,11 @@ $alert-colors: (
     border: #ffe69c,
     color: #664d03,
     background-color: #fff3cd
+  ),
+  danger: (
+    border: #ff9c9c,
+    color: #660303,
+    background-color: #ffcdcd
   )
 );
 
@@ -28,20 +33,16 @@ $alert-colors: (
   border: 1px solid map.get($alert-colors, $variant, border);
 }
 
-.alert {
+$base-class: alert;
+
+.#{$base-class} {
   padding: 16px;
   font-size: 12px;
   border-radius: 4px;
 
-  &--primary {
-    @include alert-colors(primary);
-  }
-
-  &--success {
-    @include alert-colors(success);
-  }
-
-  &--warning {
-    @include alert-colors(warning);
+  @each $variant, $values in $alert-colors {
+    &--#{$variant} {
+      @include alert-colors($variant);
+    }
   }
 }
