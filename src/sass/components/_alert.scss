@@ -22,26 +22,26 @@ $alert-colors: (
   )
 );
 
+@mixin alert-colors($variant) {
+  background-color: map.get($alert-colors, $variant, background-color);
+  color: map.get($alert-colors, $variant, color);
+  border: 1px solid map.get($alert-colors, $variant, border);
+}
+
 .alert {
   padding: 16px;
   font-size: 12px;
   border-radius: 4px;
 
   &--primary {
-    background-color: map.get($alert-colors, primary, background-color);
-    color: map.get($alert-colors, primary, color);
-    border: 1px solid map.get($alert-colors, primary, border);
+    @include alert-colors(primary);
   }
 
   &--success {
-    background-color: map.get($alert-colors, success, background-color);
-    color: map.get($alert-colors, success, color);
-    border: 1px solid map.get($alert-colors, success, border);
+    @include alert-colors(success);
   }
 
   &--warning {
-    background-color: map.get($alert-colors, warning, background-color);
-    color: map.get($alert-colors, warning, color);
-    border: 1px solid map.get($alert-colors, warning, border);
+    @include alert-colors(warning);
   }
 }
